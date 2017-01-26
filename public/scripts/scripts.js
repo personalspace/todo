@@ -1,9 +1,4 @@
-function changeClass() {
-		var elNode = document.getElementsByTagName('li');
-		if(elNode.className != 'completed'){
-		elNode.className = 'completed';
-		}};
-
-var listItem = document.getElementsByTagName('button');
-		
-listItem.onclick = changeClass;
+function changeClass(){
+	if (this.class !="completed")
+	this.class = "completed";
+};
