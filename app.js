@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+var $ = require('jquery');
 
 mongoose.connect('mongodb://localhost/todolist');
 
@@ -11,6 +12,8 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
 	console.log('Connected to database.');
 });
+
+
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
